@@ -24,6 +24,8 @@ RUN set -x \
     -i /etc/nginx/conf.d/default.conf \
   && sed 's|/scripts|$document_root|g' \
     -i /etc/nginx/conf.d/default.conf \
+  && sed 's|index\.html|index.php index.html|g' \
+    -i /etc/nginx/conf.d/default.conf \
   && sed 's/exec/sv start php5-fpm || exit 1\nexec/g' \
     -i /etc/service/nginx/run
 
