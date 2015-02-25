@@ -1,3 +1,3 @@
 #!/bin/sh
 
-exec /usr/sbin/php5-fpm
+exec /usr/sbin/php5-fpm -F
